@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART ONLINE SURVEY SYSTEM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">Smart<span>Survey</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="survey.html">Take Survey</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+
+        <h1 class="dash-title">Feedback Analytics Overview</h1>
+
+        <div class="stats-grid">
+
+    <div class="stat-card glass-card">
+        <h3>Student Surveys</h3>
+        <p id="studentCount">0</p>
+    </div>
+
+    <div class="stat-card glass-card">
+        <h3>Hospital Surveys</h3>
+        <p id="hospitalCount">0</p>
+    </div>
+
+    <div class="stat-card glass-card">
+        <h3>Employee Surveys</h3>
+        <p id="employeeCount">0</p>
+    </div>
+
+    <div class="stat-card glass-card">
+    <h3>Office Surveys</h3>
+    <p id="officeCount">0</p>
+</div>
+
+<div class="stat-card glass-card">
+    <h3>Total Responses</h3>
+    <p id="totalResponses">0</p>
+</div>
+
+</div>
+
+        <div class="charts-container">
+
+            <div class="chart-box glass-card">
+                <h3>Category-wise Averages</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-box glass-card">
+                <h3>Satisfaction Distribution</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

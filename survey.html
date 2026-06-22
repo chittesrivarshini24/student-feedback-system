@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART ONLINE SURVEY SYSTEM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">Smart<span>Survey</span></div>
+        <div class="nav-links">
+            <span id="userNameDisplay"></span>
+            <button onclick="logout()" class="logout-link">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container survey-container">
+        <div class="glass-card survey-card">
+            <h1 id="formTitle">Student Feedback Form</h1>
+            <p>Please rate the following parameters on a scale of 1 to 5</p>
+            
+            <form id="surveyForm">
+                <form id="surveyForm">
+
+    <div class="question-block">
+        <label>Select Survey Type</label>
+
+        <select id="surveyType" required>
+    <option value="">Choose Survey Type</option>
+    <option value="student">Student Feedback</option>
+    <option value="hospital">Hospital Feedback</option>
+    <option value="employee">Employee Feedback</option>
+    <option value="office">Office Feedback</option>
+</select>
+    </div>
+
+    <div class="question-block">
+    <label id="q1">1. Teaching Quality</label>
+    <div class="rating-group" data-category="teaching">
+        <input type="radio" name="teaching" value="1" required> 1
+        <input type="radio" name="teaching" value="2"> 2
+        <input type="radio" name="teaching" value="3"> 3
+        <input type="radio" name="teaching" value="4"> 4
+        <input type="radio" name="teaching" value="5"> 5
+    </div>
+</div>
+
+<div class="question-block">
+    <label id="q2">2. Lab Facilities</label>
+    <div class="rating-group" data-category="labs">
+        <input type="radio" name="labs" value="1" required> 1
+        <input type="radio" name="labs" value="2"> 2
+        <input type="radio" name="labs" value="3"> 3
+        <input type="radio" name="labs" value="4"> 4
+        <input type="radio" name="labs" value="5"> 5
+    </div>
+</div>
+
+<div class="question-block">
+    <label id="q3">3. Library Facilities</label>
+    <div class="rating-group" data-category="library">
+        <input type="radio" name="library" value="1" required> 1
+        <input type="radio" name="library" value="2"> 2
+        <input type="radio" name="library" value="3"> 3
+        <input type="radio" name="library" value="4"> 4
+        <input type="radio" name="library" value="5"> 5
+    </div>
+</div>
+
+<div class="question-block">
+    <label id="q4">4. Events</label>
+    <div class="rating-group" data-category="events">
+        <input type="radio" name="events" value="1" required> 1
+        <input type="radio" name="events" value="2"> 2
+        <input type="radio" name="events" value="3"> 3
+        <input type="radio" name="events" value="4"> 4
+        <input type="radio" name="events" value="5"> 5
+    </div>
+</div>
+                <button type="submit" class="submit-survey-btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
